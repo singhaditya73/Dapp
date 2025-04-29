@@ -13,7 +13,10 @@ import {
 
 import { Airdrop } from "./Airdrop";
 import "@solana/wallet-adapter-react-ui/styles.css";
-const wallets = [];
+import ShowSol from "./ShowBalance";  
+import { SendSols } from "./SendToken";  
+
+const wallets = [];  
 
 function App() {
   return (
@@ -26,8 +29,9 @@ function App() {
               <WalletMultiButton className="!bg-blue-600 hover:!bg-blue-700 !text-white !rounded-md !px-4 !py-2" />
               <WalletDisconnectButton className="!bg-red-500 hover:!bg-red-600 !text-white !rounded-md !px-4 !py-2" />
             </div>
-
             <Airdrop />
+            <ShowSol />
+            <SendSols />
           </div>
         </WalletModalProvider>
       </WalletProvider>
